@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header">
+        <h1>Welcome to Home Page</h1>
+        <p class="tagline">Manage your users easily and securely</p>
+    </div>
+
+    <!-- Add User Box -->
+    <div id="user-box">
+
+        <h2>Add New User</h2>
+
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter name">
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter email">
+
+        <button onclick="addUser()">Add User</button>
+
+        <p class="note">Users will appear in the table below.</p>
+
+    </div>
+
+    <!-- Table -->
+    <div class="table-container">
+
+        <h2>User List</h2>
+
+        <table id="userTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+
+    </div>
+
+<script>
+
+let id = 1;
+
+function addUser()
+{
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if(name === "" || email === "")
+    {
+        alert("Please enter name and email");
+        return;
+    }
+
+    let table = document.getElementById("userTable").getElementsByTagName("tbody")[0];
+
+    let row = table.insertRow();
+
+    row.insertCell(0).innerText = id++;
+    row.insertCell(1).innerText = name;
+    row.insertCell(2).innerText = email;
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+}
+
+</script>
+
+</body>
+</html>

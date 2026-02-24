@@ -1,0 +1,120 @@
+
+*{
+    font-family:'Times New Roman', Times, serif;
+    box-sizing:border-box;
+}
+
+
+body{
+    background:linear-gradient(to right,#00c6ff,#0072ff);
+    margin:20px;
+}
+
+
+#header{
+    background:white;
+    padding:15px;
+    border:3px solid darkblue;
+    max-width:600px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+}
+
+#header::after{
+    content:"HOME";
+    position:absolute;
+    top:5px;
+    right:10px;
+    background:red;
+    color:white;
+    padding:3px 8px;
+    border-radius:5px;
+    z-index:2;
+}
+
+
+.tagline{
+    color:gray;
+}
+
+
+#user-box{
+
+    background:white;
+    border:3px solid darkgreen;
+    padding:20px;
+    max-width:350px;
+    margin:20px auto;
+    outline:2px dotted yellow;
+    position:relative;
+    overflow:hidden;
+}
+
+input{
+
+    display:block;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:10px;
+    border:2px solid gray;
+    width:100%;
+}
+
+
+button{
+
+    display:inline-block;
+    padding:10px 20px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+.note{
+    color:darkblue;
+}
+
+
+.table-container{
+
+    background:white;
+    border:3px solid navy;
+    padding:15px;
+    max-width:600px;
+    margin:auto;
+    overflow:auto;
+}
+
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+}
+
+
+th,td{
+
+    border:1px solid blue;
+    padding:10px;
+    text-align:center;
+}
+
+
+th{
+
+    background:darkblue;
+    color:white;
+}
+
+
+tr:hover{
+    background:#e6f2ff;
+}
